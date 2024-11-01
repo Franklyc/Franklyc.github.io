@@ -381,13 +381,13 @@ h2::after {
 /* Resume Section */
 .resume-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
 .timeline {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -667,3 +667,4 @@ footer {
         rgba(96, 165, 250, 0.1) 0%, 
         rgba(59, 130, 246, 0.1) 100%);
 }
+
