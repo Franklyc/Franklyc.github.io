@@ -218,6 +218,11 @@ body {
     height: 300px;
 }
 
+.btn:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+}
+
 .btn.primary {
     background-color: var(--primary-color);
     color: white;
@@ -452,6 +457,7 @@ h2::after {
 }
 
 .project-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
     box-shadow: var(--card-shadow);
 }
