@@ -36,8 +36,7 @@
                 <a href="#projects" class="btn secondary">View Projects</a>
             </div>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/lingyun--chen" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:cly1980358059@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/lingyun--chen" target="_blank"><i class="fab fa-linkedin"></i></a>                <a href="mailto:lychen5464@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/Franklyc" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
@@ -50,23 +49,28 @@
     <section id="about" class="about">
         <div class="section-content">
             <h2>About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>I am a Master's student in Computer Engineering at NYU Tandon School of Engineering, with a strong foundation in Electronic Science and Technology from Beijing University of Technology. My expertise spans software development, machine learning, and image processing.</p>
-                    <p>I'm passionate about developing AI-powered applications and solving complex technical challenges. With experience in Python, Java, C/C++, and various frameworks, I specialize in building scalable systems and implementing cutting-edge solutions.</p>
+            <div class="about-grid">                <div class="about-text">
+                    <p>I am a Master's student in Computer Engineering at NYU Tandon School of Engineering, with a strong foundation in Electronic Science and Technology from Beijing University of Technology. My expertise spans AI/Machine Learning, software development, and computer vision.</p>
+                    <p>I'm passionate about developing AI-powered applications and solving complex technical challenges. With experience in Python, Java, C/C++, and various frameworks, I specialize in building scalable systems and implementing cutting-edge solutions in machine learning and AI.</p>
                 </div>
                 <div class="skills">
                     <h3>Technical Skills</h3>
                     <div class="skill-tags">
+                        <span>PyTorch</span>
+                        <span>Transformers</span>
+                        <span>Scikit-learn</span>
+                        <span>Federated Learning</span>
+                        <span>AIGC</span>
+                        <span>Computer Vision</span>
                         <span>Python</span>
                         <span>Java</span>
                         <span>C/C++</span>
-                        <span>Machine Learning</span>
-                        <span>Deep Learning</span>
-                        <span>Computer Vision</span>
-                        <span>TensorFlow</span>
-                        <span>PyTorch</span>
-                        <span>Full Stack Development</span>
+                        <span>SQL</span>
+                        <span>JavaScript</span>
+                        <span>Spring Boot</span>
+                        <span>Docker</span>
+                        <span>AWS</span>
+                        <span>React</span>
                     </div>
                 </div>
             </div>
@@ -79,22 +83,56 @@
             <div class="resume-grid">
                 <div class="education">
                     <h3>Education</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
+                    <div class="timeline">                    <div class="timeline-item">
                             <h4>New York University</h4>
                             <p>Master of Science in Computer Engineering</p>
-                            <p class="date">2023 - 2025</p>
+                            <p class="date">Sep 2023 - May 2025 (Expected)</p>
                         </div>
                         <div class="timeline-item">
                             <h4>University of Kentucky</h4>
-                            <p>Major: Electronic Engineering</p>
-                            <p class="date">08/2021 - 06/2022</p>
-                            <p>Study Abroad Program</p>
+                            <p>Electrical Engineering</p>
+                            <p>Dean's List Spring 2022</p>
+                            <p class="date">Aug 2021 - Jun 2022</p>
                         </div>
                         <div class="timeline-item">
                             <h4>Beijing University of Technology</h4>
                             <p>Bachelor of Science in Electronic Science and Technology</p>
-                            <p class="date">2019 - 2023</p>
+                            <p class="date">Sep 2019 - Jul 2023</p>
+                        </div>
+                    </div>                </div>
+                <div class="experience">
+                    <h3>Work Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>BioMap</h4>
+                            <p>Algorithm Intern, AI Engine R&D Department</p>
+                            <p class="date">Dec 2024 - Present </p>
+                            <ul>
+                                <li>Contributed to developing the Xtrimo DNA pre-training model (BERT-based) by implementing the Masked Language Model (MLM) component</li>
+                                <li>Benchmarked Xtrimo against other models and refined its architecture to enhance performance</li>
+                                <li>Designed automated Python AI pipelines for DNA sequence data processing and model evaluation</li>
+                                <li>Enhanced pipeline performance with caching strategies and Docker containerization</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>AdaSeco</h4>
+                            <p>AI Engineer, Customer Support Chatbot Development</p>
+                            <p class="date">Jul 2024 - Sep 2024 </p>
+                            <ul>
+                                <li>Developed a customer support chatbot using LLMs and Retrieval Augmented Generation (RAG)</li>
+                                <li>Optimized chatbot response time, reducing average latency by 30%</li>
+                                <li>Contributed to a 25% increase in customer satisfaction scores</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Wissee Inc</h4>
+                            <p>AI Engineer, Graphic Generation Project</p>
+                            <p class="date">May 2024 - Aug 2024 </p>
+                            <ul>
+                                <li>Developed AIGC models (SDXL, ComfyUI) to generate clothing patterns based on social media trends</li>
+                                <li>Built a pattern database with MySQL and integrated Elasticsearch for efficient semantic search</li>
+                                <li>Conducted trend analysis on social media and e-commerce data to inform model training</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -104,38 +142,52 @@
 
     <section id="projects" class="projects">
         <div class="section-content">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
+            <h2>Featured Projects</h2>            <div class="project-grid">
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>AI Assistant GUI Desktop App</h3>
-                        <p>Developed an interactive Python-based GUI desktop app for conversing with Claude3 AI models via the Anthropic API. Implemented SSE for faster response streaming.</p>
+                        <h3>Speech Transcript Analysis and Summarization Framework</h3>
+                        <p>Developed a PyQt6 desktop application providing a graphical user interface for real-time speech transcript processing and generating summaries via various LLMs, with bilingual support and OCR-based text extraction.</p>
                         <div class="project-tags">
                             <span>Python</span>
-                            <span>AI</span>
-                            <span>GUI</span>
+                            <span>PyQt6</span>
+                            <span>LLMs</span>
+                            <span>OCR</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Federated Learning for Healthcare</h3>
-                        <p>Developed a simulated FL environment with ten virtual clients using MIMIC-III healthcare dataset, implementing various resampling methods for addressing data imbalance.</p>
+                        <h3>Federated Learning with Imbalanced Data</h3>
+                        <p>Investigated the impact of non-IID data distributions on federated learning performance, developing simulated FL environments to evaluate resampling techniques for improving model accuracy and fairness metrics.</p>
                         <div class="project-tags">
-                            <span>Machine Learning</span>
-                            <span>Healthcare</span>
-                            <span>Python</span>
+                            <span>Federated Learning</span>
+                            <span>PyTorch</span>
+                            <span>CNN</span>
+                            <span>Data Resampling</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Medical Image Analysis</h3>
-                        <p>Implemented YOLOv7 for precise localization of labyrinth structures from temporal bone CT scans, achieving 92.3% mean Average Precision.</p>
+                        <h3>Automatic Labyrinth Structure Localization</h3>
+                        <p>Applied YOLOv7 deep learning object detection model to automatically localize complex labyrinth structures within temporal bone CT scan images, with Python and OpenCV preprocessing pipelines.</p>
                         <div class="project-tags">
+                            <span>YOLOv7</span>
                             <span>Computer Vision</span>
-                            <span>Deep Learning</span>
+                            <span>OpenCV</span>
                             <span>Medical Imaging</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Marine Chemical Pollution Detection</h3>
+                        <p>Constructed a dataset of 800 aerial ocean images and applied CNN models with transfer learning (VGG16) to classify ocean regions as polluted or normal, demonstrating the feasibility of ML for environmental monitoring.</p>
+                        <div class="project-tags">
+                            <span>MATLAB</span>
+                            <span>CNN</span>
+                            <span>VGG16</span>
+                            <span>Transfer Learning</span>
                         </div>
                     </div>
                 </div>
@@ -169,7 +221,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <a href="mailto:cly1980358059@gmail.com">cly1980358059@gmail.com</a>
+                        <a href="mailto:lychen5464@gmail.com">lychen5464@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
