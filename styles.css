@@ -1,4 +1,7 @@
 :root {
+    /* NCSU Red Theme */
+    /*--primary-color: #CC0000;*/  /* NCSU Wolfpack Red */
+    /*--secondary-color: #990000;*/ /* Darker Red */ 
     --primary-color: #2563eb;
     --secondary-color: #1e40af;
     --background-color: #ffffff;
