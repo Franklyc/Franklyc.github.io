@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Typewriter effect
+    const typewriterText = "Ph.D. Student in Computer Engineering @NC State";
+    const typewriterEl = document.getElementById('typewriter');
+    let charIndex = 0;
+
+    const typeWriter = () => {
+        if (charIndex < typewriterText.length) {
+            typewriterEl.textContent += typewriterText.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeWriter, 50 + Math.random() * 30);
+        }
+    };
+
+    setTimeout(typeWriter, 600);
+
     // Theme toggle functionality
     const themeToggle = document.createElement('button');
     themeToggle.className = 'theme-toggle';
@@ -96,6 +111,41 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
+    // Counter animation for stats
+    const animateCounter = (el) => {
+        const target = parseInt(el.getAttribute('data-target'));
+        const duration = 2000;
+        const stepTime = 30;
+        const steps = duration / stepTime;
+        const increment = target / steps;
+        let current = 0;
+
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                el.textContent = target;
+                clearInterval(timer);
+            } else {
+                el.textContent = Math.floor(current);
+            }
+        }, stepTime);
+    };
+
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                entry.target.classList.add('counted');
+                const counters = entry.target.querySelectorAll('.stat-number');
+                counters.forEach(counter => animateCounter(counter));
+            }
+        });
+    }, { threshold: 0.3 });
+
+    const statsContainer = document.querySelector('.stats-container');
+    if (statsContainer) {
+        statsObserver.observe(statsContainer);
+    }
+
     // Active section highlighting
     const sections = document.querySelectorAll('section');
     const navItems = document.querySelectorAll('.nav-links a');
@@ -175,5 +225,36 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.setProperty('--mouse-x', `${x}px`);
             card.style.setProperty('--mouse-y', `${y}px`);
         });
+    });
+
+    // Magnetic button effect
+    const magneticBtns = document.querySelectorAll('.btn');
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0)';
+        });
+    });
+
+    // Back to top button
+    const backToTopBtn = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
